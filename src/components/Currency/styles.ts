@@ -1,8 +1,13 @@
 import styled from 'styled-components';
 
+type VariationProps = {
+  positive: boolean;
+}
+
 export const Container = styled.div`
   width: 100%;
-  height: 7rem;
+  height: 100%;
+  min-height: 6rem;
 
   background: var(--gray-light);
   border-radius: 0.5rem;
@@ -16,7 +21,7 @@ export const Content = styled.div`
   border: 1px solid var(--orange);
 `;
 
-export const ContainerTitle = styled.div`
+export const LabelContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,6 +33,29 @@ export const ContainerTitle = styled.div`
   background: var(--gray-light);
 `;
 
-export const Title = styled.a`
+export const Label = styled.a`
   color: var(--orange);
+`;
+
+export const CurrencyContent = styled.div`
+  display: grid;
+  grid-gap: 5rem;
+  justify-items: stretch;
+  grid-template-columns: repeat(3, 1fr);
+
+  padding: 1rem;
+  font-size: 1.3rem;
+`
+
+export const ValuesLabel = styled.p`
+  color: var(--font-color);
+`;
+
+
+export const Values = styled.p`
+  color: var(--yellow);
+`;
+
+export const Variation = styled.p<VariationProps>`
+  ${props => props.positive ? "color: var(--green);" : "color: var(--red);"};
 `;

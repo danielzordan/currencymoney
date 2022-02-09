@@ -27,12 +27,20 @@ export const Content = styled.div`
 `;
 
 export const HeaderButton = styled.button`
-  padding: 0 2rem;
-  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.7rem;
+  width: 10rem;
+  height: 4rem;
 
   border: none;
-  background: var(--gray-light);
+  background: var(--green);
   border-radius: 0.5rem;
+
+  color: var(--primary);
+  font-size: 1.3rem;
 
   transition: filter 0.2s;
 
