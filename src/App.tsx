@@ -1,9 +1,12 @@
 import { GlobalStyle } from './styles/global';
+import { Header } from './components/Header';
+import { Currencies } from './components/Currencies';
 
 export function App() {
   return (
     <>
-      <h1>Hello World</h1>
+      <Header />
+      <Currencies />
       <GlobalStyle />
     </>
   );
