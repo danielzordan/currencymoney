@@ -33,7 +33,7 @@ export const LabelContainer = styled.div`
   background: var(--gray-light);
 `;
 
-export const Label = styled.a`
+export const Label = styled.p`
   color: var(--orange);
 `;
 
@@ -42,6 +42,10 @@ export const CurrencyContent = styled.div`
   grid-gap: 5rem;
   justify-items: stretch;
   grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: 750px) {
+    grid-gap: 3rem;
+  }
 
   padding: 1rem;
   font-size: 1.3rem;
